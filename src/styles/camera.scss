@@ -1,11 +1,21 @@
 .webcam-stream {
   margin: 0px auto;
 	width: 100vw;
-	height: 100vh;
-  
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+
   &__video {
     width: 100vw;
     height: 100vh;
     background-color: #666;
+  }
+
+  &__canvas {
+    position: absolute;
+    border: red 1px solid;
+    top: 0;
+    left: 0;
   }
 }
