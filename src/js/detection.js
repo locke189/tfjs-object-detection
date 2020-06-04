@@ -13,16 +13,16 @@ export default async () => {
   const cocoSSDModel = await cocoSsd.load();
 
   console.log('creating video element..');
-  const videoElement = document.createElement('video');
+  const videoElement = document.querySelector('.webcam-stream__video');
   const canvasElement = document.querySelector('.webcam-stream__canvas');
   // This allows us to create a tensor directly from the video feed.
-  const cam = await tf.data.webcam(videoElement, {
-    resizeWidth: 224,
-    resizeHeight: 224
-  });
+  // const cam = await tf.data.webcam(videoElement, {
+  //   resizeWidth: 224,
+  //   resizeHeight: 224
+  // });
 
   await setInterval(async () => {
-    const img = await cam.capture();
+    // const img = await cam.capture();
     const rawPredictions = await predict(videoElement, cocoSSDModel);
     drawPredictions(Array.from(rawPredictions), canvasElement);
   }, 500)

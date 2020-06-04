@@ -4,7 +4,7 @@
   "main": "index.js",
   "repository": "git@github.com:locke189/tfjs-object-detection.git",
   "scripts": {
-    "start": "parcel src/*.html src/public/**/* --https"
+    "start": "parcel src/index.html src/public/**/* --https"
   },
   "license": "MIT",
   "devDependencies": {
